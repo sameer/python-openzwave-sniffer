@@ -5,9 +5,10 @@ This program initializes the ZWave Network, logging any and all value refreshes 
 
 ## Set-up
 
-### Ubuntu
+### Ubuntu (also Windows Subsystem for Linux with Ubuntu)
 
 > ./setup_ubuntu.sh
+
 > ./allow_port_access_forever_ubuntu.sh
 
 ### OS X
@@ -27,7 +28,7 @@ Just do ctrl+C once, it will stop itself.
 
 ** Assume # to be the port number of the ZWave Stick. **
 
-On Windows, COM#, you can figure out what this number is by opening Device Manager and looking at the USB devices list
+On Windows Subsystem for Linux with Ubuntu, it should be COM# in Windows and /dev/ttyS# in Ubuntu. You can try figure out what # is by opening Device Manager and looking at the USB devices list, then trying each with `./run.sh /dev/ttyS#`.
 
 On OS X, it should be /dev/ttyUSB#, you can try each one until you get it right
 
