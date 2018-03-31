@@ -27,11 +27,14 @@ This program initializes the ZWave Network, logging any and all value refreshes 
 
 ** Assume # to be the port number of the ZWave Stick. **
 
-On Windows Subsystem for Linux with Ubuntu, it should be COM# in Windows and /dev/ttyS# in Ubuntu. You can try figure out what # is by opening Device Manager and looking at the USB devices list, then trying each with `./run.sh /dev/ttyS#` until it works. If you get an error message that permission is denied, run `./allow_port_access_once.sh /dev/tty/S#`.
+#### Windows Subsystem for Linux with Ubuntu
+It should be COM# in Windows and /dev/ttyS# in Ubuntu. You can try figure out what # is by opening Device Manager and looking at the USB devices list, then trying each with `./run.sh /dev/ttyS#` until it works. If you get an error message that permission is denied, run `./allow_port_access_once.sh /dev/tty/S#`.
 
-On OS X, it should be /dev/ttyUSB#, you can also try each one until you get it right.
+#### OS X
+It should be /dev/ttyUSB#, you can also try each one until you get it right.
 
-On any other Linux system, it should be /dev/ttyACM#, you may need permission to read/write to the port. In that case, run `./allow_port_access_once.sh /dev/ttyACM#` or use the indefinite version.
+### Any other Linux system
+It should be /dev/ttyACM#, you may need permission to read/write to the port. In that case, run `./allow_port_access_once.sh /dev/ttyACM#` or use the indefinite version.
 
 ### Is it relatively safe to delete all the files that seem to be generated (i.e. pyozw.sqlite) when I run the sniffer?
 
