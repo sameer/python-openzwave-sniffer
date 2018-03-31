@@ -33,8 +33,10 @@ It should be COM# in Windows and /dev/ttyS# in Ubuntu. You can try figure out wh
 #### OS X
 It should be /dev/ttyUSB#, you can also try each one until you get it right.
 
-### Any other Linux system
+#### Any other Linux system
 It should be /dev/ttyACM#, you may need permission to read/write to the port. In that case, run `./allow_port_access_once.sh /dev/ttyACM#` or use the indefinite version.
+
+---
 
 ### Is it relatively safe to delete all the files that seem to be generated (i.e. pyozw.sqlite) when I run the sniffer?
 
