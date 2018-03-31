@@ -25,7 +25,7 @@ This program initializes the ZWave Network, logging any and all value refreshes 
 
 ### What should the port name be?
 
-** Assume # to be the port number of the ZWave Stick. **
+* Let # as used below to be the port number of the ZWave Stick. *
 
 #### Windows Subsystem for Linux with Ubuntu
 It should be COM# in Windows and /dev/ttyS# in Ubuntu. You can try figure out what # is by opening Device Manager and looking at the USB devices list, then trying each with `./run.sh /dev/ttyS#` until it works. If you get an error message that permission is denied, run `./allow_port_access_once.sh /dev/tty/S#`.
