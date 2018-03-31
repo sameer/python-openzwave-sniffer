@@ -18,6 +18,9 @@ This program initializes the ZWave Network, logging any and all value refreshes 
 
 > ./run.sh <optional port name, defaults to /dev/ttyACM0 for Linux>
 
+## Stopping
+Just do ctrl+C once, it will stop itself.
+
 ## FAQ
 
 ### What should the port name be?
