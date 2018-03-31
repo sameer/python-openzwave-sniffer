@@ -22,7 +22,9 @@ This program initializes the ZWave Network, logging any and all value refreshes 
 
 ### What should the port name be?
 
-On Windows, COM# where # is the number of the port the ZWave Stick is in. You can figure out what this number is by opening Device Manager and looking at the USB devices list
+** Assume # to be the port number of the ZWave Stick. **
+
+On Windows, COM#, you can figure out what this number is by opening Device Manager and looking at the USB devices list
 
 On OS X, it should be /dev/ttyUSB#, you can try each one until you get it right
 
