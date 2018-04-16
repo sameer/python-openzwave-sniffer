@@ -77,6 +77,7 @@ class HomeManager(object):
         self.network = ZWaveNetwork(options, log=None, autostart=False)
         self.csvfile = open('output.csv', 'a')
         self.writer = csv.writer(self.csvfile)
+        self.stopping = False
 
     def start(self):
         self.logger.info("Starting network...")
@@ -86,6 +87,10 @@ class HomeManager(object):
         self.stop()
 
     def stop(self):
+        if self.stopping:
+            return
+        else:
+            self.stopping = True
         self.logger.info("Stopping network...")
         self.network.stop()
         self.csvfile.close()
