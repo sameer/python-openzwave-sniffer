@@ -7,6 +7,8 @@ This program initializes the ZWave Network, logging any and all value refreshes 
 
 ### Ubuntu (also Windows Subsystem for Linux with Ubuntu)
 
+*Note: if you do not already have Windows Subsystem for Linux, follow the [installation guide](https://docs.microsoft.com/en-us/windows/wsl/install-win10) provided by Microsoft*
+
 * ./setup_ubuntu.sh
 * ./allow_port_access_forever_ubuntu.sh
 
@@ -39,12 +41,14 @@ It should be /dev/ttyACM#, you may need permission to read/write to the port. In
 ---
 
 ### Is it relatively safe to delete all the files that seem to be generated (i.e. pyozw.sqlite) when I run the sniffer?
-
 Yes, just make sure you stop the sniffer first. Use clean.sh
 
+---
 
 ### Error in manager callback: KeyError: 'valueid'
 If you're seeing this, there was an error in configuring the network properly. It's best to re-download/re-clone this repo and run it from there, or alternatively delete all the new files.
+
+---
 
 ### Stuck in state "Topology loaded"
 This has happened to me several times -- usually, the issue is that you're running the network for the first time and the stick is waiting for something (not sure what). The solution tends to be to press the button on each of the sensors once.
