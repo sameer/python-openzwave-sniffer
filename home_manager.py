@@ -1,6 +1,7 @@
 import csv
 import signal
-
+import datetime
+import sys
 import time
 from openzwave.command import ZWaveNodeSensor
 from openzwave.network import ZWaveNetwork
@@ -46,6 +47,7 @@ def value_refresh_to_influxdb_json(node, val):
 
 def value_refresh_to_csv(node, val):
     return [
+        datetime.datetime.now(),
         val.id_on_network,  # A sort of sensor UUID
         node.home_id,       # The home id, a hexadecimal string
         node.node_id,       # The node id, a number from 1 to n where n is the number of nodes on the network
@@ -65,7 +67,7 @@ class HomeManager(object):
         self.logger = logger
 
         options = ZWaveOption(device_path,
-                              config_path="./venv/lib/python3.6/site-packages/python_openzwave/ozw_config",
+                              config_path="./venv/lib/python3.%d/site-packages/python_openzwave/ozw_config" % sys.version_info[1],
                               user_path=".", cmd_line="")
         options.set_log_file("OZW.log")
         options.set_append_log_file(False)

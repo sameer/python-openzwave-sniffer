@@ -41,3 +41,7 @@ It should be /dev/ttyACM#, you may need permission to read/write to the port. In
 ### Is it relatively safe to delete all the files that seem to be generated (i.e. pyozw.sqlite) when I run the sniffer?
 
 Yes, just make sure you stop the sniffer first.
+
+
+### Error in manager callback: KeyError: 'valueid'
+If you're seeing this, there was an error in configuring the network properly. It's best to re-download/re-clone this repo and run it from there, or alternatively delete all the new files.
