@@ -45,3 +45,6 @@ Yes, just make sure you stop the sniffer first. Use clean.sh
 
 ### Error in manager callback: KeyError: 'valueid'
 If you're seeing this, there was an error in configuring the network properly. It's best to re-download/re-clone this repo and run it from there, or alternatively delete all the new files.
+
+### Stuck in state "Topology loaded"
+This has happened to me several times -- usually, the issue is that you're running the network for the first time and the stick is waiting for something (not sure what). The solution tends to be to press the button on each of the sensors once.
